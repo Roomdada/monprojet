@@ -3,7 +3,7 @@
 
 if (! function_exists('page_title'))
 {
-	fucntion page_title($title)
+	function page_title($title)
 	{
 		$endtitle = 'UPB-developer';
 
