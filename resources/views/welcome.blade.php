@@ -1,4 +1,4 @@
-@extends('includes/template')
+@extends('includes/template',['title'=>'Home'])
 @section('contenu')
  <br>
  <br>
