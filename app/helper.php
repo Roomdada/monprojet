@@ -5,7 +5,7 @@ if (! function_exists('page_title'))
 {
 	function page_title($title)
 	{
-		$endtitle = 'UPB-developer';
+		$endtitle =config('app.name');
 
 		if ($title ==='')
 	    {
