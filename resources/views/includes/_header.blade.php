@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-md navbar-secondary fixed-top bg-secondary">
-  <a class="navbar-brand" href="#">{{ config('app.name') }}</a>
+  <a class="navbar-brand" href="{{route('path_home')}}">{{ config('app.name') }}</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -16,7 +16,7 @@
         <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Nos Developpeurs</a>
       </li>
          <li class="nav-item">
-        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Contactez-nous</a>
+        <a class="nav-link" href="{{route('path_contact')}}" tabindex="-1" aria-disabled="true">Contactez-nous</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Les technos</a>

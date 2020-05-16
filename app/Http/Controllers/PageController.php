@@ -18,4 +18,6 @@ class PageController extends Controller
     {
     	return view('includes/about');
     }
+  
+
 }
