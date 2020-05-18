@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Mail\ContactCreated;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -35,3 +35,18 @@ Route::get('/contact',
     	'uses'=>'ContactController@create'
     ]
 );
+
+Route::post('/contact',
+    [
+    	'as'=>'post_path_contact',
+    	'uses'=>'ContactController@store'
+    ]
+);
+
+
+Route::get('/test-email',function()
+{
+	return new ContactCreated('Room','dsieroger@gmail','je suis fier de moi.');
+}
+);
+

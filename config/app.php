@@ -165,7 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
-
+          Mercuryseries\Flashy\FlashyServiceProvider::class,
         /*
          * Application Service Providers...
          */

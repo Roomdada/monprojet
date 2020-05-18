@@ -8,14 +8,23 @@
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2  col-sm-10 col-sm-offset-1">
            <h2>Contactez-nous pour tous vos préoccupations</h2>
-			<form class="form-group">
-				<label class="control-label" for="name">Name</label>
-				<input type="text" id="name" name="name" class="form-control">
-				<label  class="control-label" for="email">Email</label>
-				<input id="email" type="email" name="email" class="form-control">
-				<label  for="message"  class="control-label sr-only">Message</label><br>
-				<textarea id="message" rows="10" cols="10" class="form-control" name="message">message...</textarea>
-				<br>
+			<form action="{{route('post_path_contact')}}" method="POST">
+				{{csrf_field()}}
+				<div class="form-group">
+					<label class="control-label" for="name">Name</label>
+					<input value="{{old('name')}}" required="required" type="text" id="name" name="name" class="form-control">
+					{!! $errors->first('name','<span class="help-block">:message</span>') !!}
+				</div>
+			 <div class="form-group">
+			 	<label  class="control-label" for="email">Email</label>
+				<input value="{{old('email')}}" required="required" id="email" type="email" name="email" class="form-control">
+				{!! $errors->first('email','<span class="help-block">:message</span>') !!}
+			 </div>
+			<div class="form-group">
+					<label  for="message"  class="control-label sr-only">Message</label><br>
+				<textarea  required="required" id="message" rows="10" cols="10" class="form-control" name="message" >{{old('message')}}</textarea>
+				{!! $errors->first('message','<span class="help-block">:message</span>') !!}
+			</div>
 				<button class="btn btn-info" name="send">Send your message</button>
 			</form>
 		</div>
